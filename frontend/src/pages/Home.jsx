@@ -1,19 +1,31 @@
+import { Link } from "react-router-dom";
+import PageTitle from "../components/PageTitle";
+import Carousel from "../components/Carousel";
+
 export default function Home() {
     return (
-        <section className="grid grid-cols-1 lg:grid-cols-[1fr,380px] gap-6 items-start">
-            <div className="rounded-xl overflow-hidden shadow-sm">
-                <div className="aspect-[16/10] bg-slate-200 flex items-center justify-center text-slate-500">
-                    WHEN WE ARE BUILDING THE REMAINING STUFF LET US ADD THE IMAGE IN HERE OKAY PRAISE!
-                    WE CAN ALSO MAKE A CAROUSEL
-                </div>
+        <section className="grid grid-cols-1 xl:grid-cols-[1.3fr,0.7fr] gap-10 items-start">
+            <div className="space-y-5">
+                <PageTitle>Home</PageTitle>
+                <Carousel ratio="aspect-[16/9]" />
             </div>
-            <div className="space-y-4">
-                {["Browse Destinations","Log your travels","Explore destinations","Upload memories"].map((t) => (
-                    <div key={t} className="rounded-2xl bg-[#F97316] text-white px-6 py-5 shadow-sm">
-                        {t}
-                    </div>
+
+            <aside className="space-y-6">
+                {[
+                    { to: "/destinations", label: "Browse Destinations" },
+                    { to: "/add-entry", label: "Log your travels" },
+                    { to: "/destinations", label: "Explore destinations" },
+                    { to: "/add-entry", label: "Upload memories" },
+                ].map((b) => (
+                    <Link
+                        key={b.label}
+                        to={b.to}
+                        className="block rounded-2xl bg-[#F97316] text-white px-7 py-5 shadow-sm hover:brightness-105 transition"
+                    >
+                        {b.label}
+                    </Link>
                 ))}
-            </div>
+            </aside>
         </section>
     );
 }
