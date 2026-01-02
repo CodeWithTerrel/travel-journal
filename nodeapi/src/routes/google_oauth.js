@@ -11,7 +11,7 @@ const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
 // This must match your Google Console redirect URI exactly
-const GOOGLE_REDIRECT_URI = "http://localhost:8080/oauth/google/callback";
+const GOOGLE_REDIRECT_URI = "";
 
 // Helper: set auth cookies (same behaviour as /api/auth/login)
 function setAuthCookies(res, user) {
