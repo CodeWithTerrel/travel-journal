@@ -2,3 +2,9 @@
 # env files
 nodeapi/.env
 nodeapi/.env.*
+
+# env files
+nodeapi/.env
+nodeapi/.env.*
+.env
+.env.*
