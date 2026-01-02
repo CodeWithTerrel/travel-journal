@@ -1,0 +1,31 @@
+{
+  "name": "travel-journal-backend",
+  "version": "1.0.0",
+  "description": "API for Travel Journal (SQLite + Express)",
+  "private": true,
+  "main": "src/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "db:init": "node src/db/init.js",
+    "db:seed": "node src/db/seed.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "connect-sqlite3": "^0.9.16",
+    "cookie-parser": "^1.4.6",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "express-session": "^1.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "1.4.5-lts.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.0"
+  }
+}
